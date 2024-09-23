@@ -13,3 +13,4 @@ jobs:
         - run: echo "${{ secrets.DEMO }}"
         - run: echo added something
         - run: echo something plssssss
+        - run: echo "${{ github.repository }}"
