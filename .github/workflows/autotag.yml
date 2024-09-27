@@ -19,4 +19,4 @@ jobs:
         echo $TAG_NAME
         git tag $TAG_NAME
         echo "Pushing tag $TAG_NAME"
-        git push https://x-access-token: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@github.com/asif741852014/settingdockeraction.git $TAG_NAME || (echo "Push failed with exit code $?"; exit 1)
+        git push https://x-access-token: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@github.com/asif1121212121/one.git $TAG_NAME || (echo "Push failed with exit code $?"; exit 1)
