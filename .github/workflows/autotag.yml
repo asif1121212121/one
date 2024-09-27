@@ -11,8 +11,8 @@ jobs:
       uses: actions/checkout@v4
     - name: tag
       run: |
-        git config user.name "sif741852014"
-        git config user.email "asiftkmohammed@gmail.com"
+        git config user.name "asif1121212121"
+        git config user.email "katt27641@gmail.com"
     - name: push
       run: |
         TAG_NAME="build-$(date +'%Y%m%d%H%M%S')"
