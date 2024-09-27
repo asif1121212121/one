@@ -1,0 +1,22 @@
+name: auto-tag
+on:
+  push:
+    branches:
+    - main
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: tag
+      run: |
+        git config user.name "sif741852014"
+        git config user.email "asiftkmohammed@gmail.com"
+    - name: push
+      run: |
+        TAG_NAME="build-$(date +'%Y%m%d%H%M%S')"
+        echo $TAG_NAME
+        git tag $TAG_NAME
+        echo "Pushing tag $TAG_NAME"
+        git push https://x-access-token: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@github.com/asif741852014/settingdockeraction.git $TAG_NAME || (echo "Push failed with exit code $?"; exit 1)
